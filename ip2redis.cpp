@@ -25,7 +25,7 @@
 
 namespace po = boost::program_options;
 
-namespace yeahmobi {
+namespace iptool {
 
     boost::shared_ptr<redis::client> c;
 
@@ -155,7 +155,7 @@ namespace yeahmobi {
 
 int main(int argc, char* argv[])
 {
-    using namespace yeahmobi;
+    using namespace iptool;
 
     // Declare a group of options that will be
     // allowed only on command line
