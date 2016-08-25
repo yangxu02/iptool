@@ -37,19 +37,14 @@ IPRangeIndex* IPRangeIndex::loadFromFile(const char* file) {
             }
 
             if (getline(ifs, line) && 0 != line.length()) {
-                //                        UI_DEBUG("index offset region=%u, nRange=%u, size=%u, line:%s", region, nRange, size, line.c_str());
+               
                 std::istringstream ss(line);
                 char c;
                 ss >> range->offsets[nRange]; // nRange == 0
                 for (nRange = 1; nRange < size; ++nRange) {
                     ss >> c >> range->offsets[nRange];
                 }
-                /*
-                   UI_DEBUG("region=%u, offset[0]=%u, offset[-1]=%u, nRange=%u",
-                   region, range->offsets[0],
-                   range->offsets[nRange-1],
-                   nRange);
-                   */
+
             } else {
                 std::cout << "index file cruptted" << std::endl;
                 return NULL;
