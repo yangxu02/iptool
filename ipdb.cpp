@@ -26,11 +26,10 @@
 
 #include "redisclient.h"
 
-#define XXXX "__Yeahmobi_Mana__"
 
 namespace po = boost::program_options;
 
-namespace yeahmobi {
+namespace iptool {
 
     const boost::algorithm::detail::is_any_ofF<char> isQuote = boost::is_any_of("\"");
     const boost::algorithm::detail::is_any_ofF<char> isComma = boost::is_any_of(":");
@@ -936,7 +935,7 @@ namespace yeahmobi {
 
 int main(int argc, char* argv[])
 {
-    using namespace yeahmobi;
+    using namespace iptool;
 
 
     // Declare a group of options that will be
@@ -974,30 +973,6 @@ int main(int argc, char* argv[])
 
     }
 
-    std::cout << XXXX << std::endl;
-
-
-    /*
-    const char* dbFile = "/data1/sdk/ip/test.CSV"; // if not given, looking at the classpath
-    const char* indexFile = "IPRangeIndex.db"; // if not given, looking at the classpath
-    const char* stateFile = "stateIndex.db"; // if not given, looking at the classpath
-    const char* cityFile = "cityIndex.db"; // if not given, looking at the classpath
-    const char* ispFile = "ispIndex.db"; // if not given, looking at the classpath
-    if (argc == 6) {
-        dbFile = argv[1];
-        indexFile = argv[2];
-        stateFile = argv[3]; // if not given, looking at the classpath
-        cityFile = argv[4]; // if not given, looking at the classpath
-        ispFile = argv[5]; // if not given, looking at the classpath
-    }
-
-    load(dbFile);
-
-    dump(indexFile, array);
-    dump(stateFile, stateMap);
-    dump(cityFile, cityMap);
-    dump(ispFile, ispMap);
-    */
 
     return 0;
 
